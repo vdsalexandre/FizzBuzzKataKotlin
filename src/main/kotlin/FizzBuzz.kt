@@ -2,16 +2,16 @@ class FizzBuzz {
     companion object {
         const val FIZZ = " ... Fizz ... "
         const val BUZZ = " ... Buzz ... "
-    }
-    private var message: String = ""
-
-    fun printFizzBuzzValue(value: Int) {
-        prepareFizzBuzzMessage(value)
-        println(message)
+        const val FIZZ_VALUE = 3
+        const val BUZZ_VALUE = 5
     }
 
-    private fun prepareFizzBuzzMessage(value: Int) {
-        message = when {
+    fun getFizzBuzzValue(value: Int): String {
+        return prepareFizzBuzzMessage(value)
+    }
+
+    private fun prepareFizzBuzzMessage(value: Int): String {
+        return when {
             isFizz(value) -> FIZZ
             isBuzz(value) -> BUZZ
             isFizz(value) && isBuzz(value) -> FIZZ + BUZZ
@@ -20,10 +20,10 @@ class FizzBuzz {
     }
 
     private fun isFizz(value: Int): Boolean {
-        return (value % 3 == 0)
+        return (value % FIZZ_VALUE == 0)
     }
 
     private fun isBuzz(value: Int): Boolean {
-        return (value % 5 == 0)
+        return (value % BUZZ_VALUE == 0)
     }
 }
