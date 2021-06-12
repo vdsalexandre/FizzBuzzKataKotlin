@@ -6,7 +6,7 @@ class FizzBuzz {
         const val BUZZ_VALUE = 5
     }
 
-    fun getFizzBuzzValue(value: Int): String {
+    fun getFizzBuzzMessage(value: Int): String {
         return prepareFizzBuzzMessage(value)
     }
 
